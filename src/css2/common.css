@@ -1,0 +1,40 @@
+/*background-color*/
+.AliceBlue { background: #f6fbff;}
+
+/*정렬*/
+.t_left {float: left;}
+.t_right {float: right;}
+/**/
+.pageTitle .h2 {
+	font-size: 26px;
+	font-family:‘Trebuchet MS’, Helvetica, sans-serif;
+  font-weight: bold;
+  color:#435f80;
+	text-align: left;
+}
+
+.aboutContent h2 {
+    font-size: 26px;
+    margin-bottom: 35px;
+    line-height: 38px;
+    color:#435f80;
+    font-weight: bold;
+}
+
+.spark-breadcrumb {
+	margin: 0px;
+	padding: 0px;
+}
+
+.spark-breadcrumb li{
+	list-style: none;
+	float: left;
+	color: #8ba1b9;
+	font-size: 14px;
+	margin-right: 6px;
+	text-transform: lowercase;
+}
+.spark-breadcrumb li a{
+	color: #8ba1b9;
+
+}
