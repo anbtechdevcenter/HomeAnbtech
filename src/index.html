@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>에이앤비테크(주)</title>
-	<base href="/">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -63,10 +62,18 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-  <script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+	 <script type="text/javascript">
+	  WebFont.load({
+
+	  // For early access or custom font
+	  custom: {
+	   families: ['Nanum Gothic'],
+	   urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
+	  }
+
+	 });
+	 </script>
 
 	</head>
 	<body>
@@ -79,15 +86,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-2">
-						<div id="anb-logo"><a href="index.html"></a></div>
+						<div id="anb-logo"><a href="#"></a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
+							<li class="active"><a href="#">Home</a></li>
 							<li class="has-dropdown">
-								<a href="about.html">ABOUT US</a>
+								<a href="#">ABOUT US</a>
 								<ul class="dropdown">
-									<li><a href="#">MJ11</a></li>
+									<li><a href="#">Introduce</a></li>
 									<li><a href="#">History</a></li>
 									<li><a href="#">Organization</a></li>
 									<li><a href="#">Map</a></li>
@@ -95,7 +102,7 @@
 								</ul>
 							</li>
 							<li class="has-dropdown">
-								<a href="services.html">OUR BUSINESS</a>
+								<a href="#">OUR BUSINESS</a>
 								<ul class="dropdown">
 									<li><a href="#">Solution Dev</a></li>
 									<li><a href="#">Planning & Design</a></li>
@@ -107,7 +114,7 @@
 								</ul>
 							</li>
 							<li class="has-dropdown">
-								<a href="support.html">CUSTOMER SUPPORT</a>
+								<a href="#">CUSTOMER SUPPORT</a>
 								<ul class="dropdown">
 									<li><a href="#">Contact Us</a></li>
 									<li><a href="#">Q&A Board</a></li>
@@ -122,7 +129,7 @@
 		</div>
 	</nav>
 
-	<aside id="anb-hero" class="js-fullheight">
+	<aside id="main-slide">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
 		   	<li style="background-image: url(images/img_bg_1.jpg);">
@@ -171,7 +178,7 @@
 	  	</div>
 	</aside>
 
-	<div id="anb-practice" class="anb-bg-section">
+	<div id="main-list" class="anb-bg-section">
 		<div class="container">
 			<div class="row animate-box">
 				<!-- <div class="col-md-8 col-md-offset-2 text-center anb-heading">
@@ -183,7 +190,7 @@
 				<div class="col-md-4 text-center animate-box">
 					<div class="services">
 						<span class="icon">
-							<i class="icon-home"></i>
+							<i class="icon-globe"></i>
 						</span>
 						<div class="desc">
 							<h3><a href="#">ABOUT US</a></h3>
@@ -197,7 +204,7 @@
 				<div class="col-md-4 text-center animate-box">
 					<div class="services">
 						<span class="icon">
-							<i class="icon-eye"></i>
+							<i class="icon-laptop"></i>
 						</span>
 						<div class="desc">
 							<h3><a href="#">Our Business</a></h3>
@@ -211,7 +218,7 @@
 				<div class="col-md-4 text-center animate-box">
 					<div class="services">
 						<span class="icon">
-							<i class="icon-shopping-cart"></i>
+							<i class="icon-info"></i>
 						</span>
 						<div class="desc">
 							<h3><a href="#">Customer Support</a></h3>
@@ -226,7 +233,7 @@
 		</div>
 	</div>
 
-	<div id="anb-started" style="background-image:url(images/img_bg_2.jpg);">
+	<div id="main-remote" style="background-image:url(images/img_bg_2.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
@@ -243,7 +250,7 @@
 		</div>
 	</div>
 
-	<div id="anb-started" style="background-image:url(images/img_bg_2.jpg);">
+	<div id="main-careers" style="background-image:url(images/img_bg_2.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
@@ -260,21 +267,16 @@
 		</div>
 	</div>
 
+<app-root></app-root>
+
 	<footer id="anb-footer" role="contentinfo">
 		<div class="container">
+			<div class="row member-login"><a href="">Members Login</a></div>
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 anbtech. All rights reserved</small>
+						<small class="block">&copy; 2017 anbtech. All rights reserved</small>
 						<small class="block">에이앤비테크(주) [467-866] 경기도 이천시 부발읍 아미리 670-2 동명빌딩 2층</small>
-					</p>
-					<p>
-						<ul class="anb-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
 					</p>
 				</div>
 			</div>
@@ -287,7 +289,6 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 
-<app-root></app-root>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -309,8 +310,6 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
-
 
 	</body>
 </html>
