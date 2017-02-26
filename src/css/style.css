@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-*  Template Style 
+*  Template Style
 *
 * ======================================================= */
 body {
@@ -82,6 +82,7 @@ h1, h2, h3, h4, h5, h6, figure {
   z-index: 1900;
   background: rgba(256,256,256,1);
   width: 100%;
+  border-bottom: 1px solid #026fd8;
 }
 .anb-nav #anb-logo {
   font-size: 24px;
@@ -1636,4 +1637,3 @@ h1, h2, h3, h4, h5, h6, figure {
   opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */
-
