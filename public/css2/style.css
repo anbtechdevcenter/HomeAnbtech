@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-*  Template Style 
+*  Template Style
 *
 * ======================================================= */
 body {
@@ -581,6 +581,22 @@ h1, h2, h3, h4, h5, h6, figure {
 .services h3 a {
   color: #000;
 }
+#memLogin.services .icon {
+  width: 60px;
+  height: 60px;
+  background: #5F6063;
+  display: table;
+  text-align: center;
+  margin: -75px auto 0 auto;
+  margin-bottom: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
 .services .icon {
   width: 90px;
   height: 90px;
@@ -610,6 +626,7 @@ h1, h2, h3, h4, h5, h6, figure {
   line-height: 40px;
   color: #fff;
 }
+
 .services:hover, .services:focus {
   -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
@@ -1570,4 +1587,6 @@ h1, h2, h3, h4, h5, h6, figure {
 .js .animate-box {
   opacity: 0;
 }
+
+
 /*# sourceMappingURL=style.css.map */
