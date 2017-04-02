@@ -29,6 +29,7 @@ body {font-size: 16px;  line-height: 1.7;  color: #828282;  background: #fff;}
 a {color: #4078c0;  -webkit-transition: 0.5s;  -o-transition: 0.5s;  transition: 0.5s;}
 a:hover, a:active, a:focus {color: #4078c0;  outline: none;  text-decoration: none;}
 p {margin-bottom: 20px;}
+.blind, caption {font-size:0; line-height:0; text-indent:-10000px;}
 
 h1, h2, h3, h4, h5, h6, figure {font-family: 'Ubuntu',nanumsquare, 'Open Sans', Sans-serif;}
 .visual h1 {color:#fff; margin-top:20px;}
@@ -229,7 +230,7 @@ background: #fff;
 }
 
 /* Button */
-.btn { margin-right: 4px; margin-bottom: 4px; font-family: "Nanum Gothic", sans-serif; font-size: 16px; font-weight: 400;
+.btn {margin-right: 4px; margin-bottom: 4px; font-size: 16px; font-weight: 400;
 -webkit-border-radius: 30px;
 -moz-border-radius: 30px;
 -ms-border-radius: 30px;
@@ -241,7 +242,9 @@ padding: 8px 20px;
 }
 .btn.btn-md {padding: 8px 20px !important;}
 .btn.btn-lg {padding: 14px 30px !important;}
-.btn:hover, .btn:active, .btn:focus { box-shadow: none !important; outline: none !important;}
+
+
+.btn:hover, .btn:active, .btn:focus {box-shadow: none !important; outline: none !important;}
 
 .form-control {box-shadow: none; background: transparent; border: 2px solid rgba(0, 0, 0, 0.1); height: 54px; font-size: 18px; font-weight: 300;}
 .form-control:active, .form-control:focus {outline: none; box-shadow: none; border-color: #4078c0;}
@@ -288,16 +291,17 @@ img.full {width:100%;}
 .AliceBlue { background: #f6fbff;}
 
 /*정렬*/
-.t_left {float: left;}
-.t_right {float: right;}
+.t_left {float: left !important;}
+.t_right {float: right !important;}
+.t_clear {clear:both !important;}
 
-.al_left {text-align:left;}
-.al_right {text-align:right;}
-.al_center {text-align:center;}
+.al_left {text-align:left !important;}
+.al_right {text-align:right !important;}
+.al_center {text-align:center !important;}
 
 
 /* Table */
-caption{padding:0;margin:0;font-size:0;width:0;height:0;line-height:0;text-indent:-9999px;}
+.responsive-table{overflow:hidden;}
 .tbl01{width:100%;table-layout:fixed;border-top:2px solid #6b747f;}
 .tbl01 thead th{padding:10px 20px;}
 .tbl01 thead th,.tbl01 tfoot td{font-weight:bold;letter-spacing:-0.05em;color:#484f68;text-align:center;border-left:1px solid #c6c6c6;border-bottom:1px solid #c6c6c6;background-color:#f9f9f9;}
@@ -310,12 +314,98 @@ caption{padding:0;margin:0;font-size:0;width:0;height:0;line-height:0;text-inden
 .tbl01.padding_less thead th,.tbl01.padding_less tbody td{padding:6px 10px 10px;}
 .tbl01 .part_number{color:#ea5d4b;text-decoration:underline;}
 
-.tbl_tp02{width:100%;table-layout:fixed;font-size:13px;}
-.tbl_tp02 tbody th, .tbl_tp02 tbody td{padding:8px 20px 10px;color:#555;line-height:20px;letter-spacing:-0.05em;text-align:left;border-bottom:1px solid #c6c6c6;}
-.tbl_tp02 tbody th{font-weight:bold;color:#484f68;background-color:#f8f8f8;}
-.tbl_tp02 tbody td{}
-.tbl_tp02 tbody th.al_c, .tbl_tp02 tbody td.al_c{text-align:center;}
-.tbl_tp02 .con{min-height:100px;vertical-align:top;}
-.tbl_tp02.inst_tbl .mth{display:none;font-weight:bold;color:#484f68;}
-
 .tbl01.al_c thead th,.tbl01.al_c tfoot td, .tbl01.al_c tbody th, .tbl01.al_c tbody td{text-align:center;}
+
+@media screen and (max-width: 768px) {
+ .responsive-table {overflow-x:auto;}
+ .tbl01 {/* max-width:100%; */table-layout:auto;}
+ .tbl01 thead th, .tbl01 tbody th, .tbl01 tbody td, .tbl_opt thead th, .tbl_opt tbody td {white-space:nowrap}
+ .tbl01.no_responsible thead th, .tbl01.no_responsible tbody th, .tbl01.no_responsible tbody td {white-space:normal;}
+}
+
+/* Board List*/
+
+.board_list {width:100%;table-layout:fixed;border-top:2px solid #6b747f;}
+.board_list thead th {padding:10px 20px; text-align:center; border-bottom:1px solid #c6c6c6; background: url(../images/board_line.gif) no-repeat right 15px #f8f8f8;}
+.board_list thead th.bg_none {padding:10px 20px; text-align:center; border-bottom:1px solid #c6c6c6; background:none; background-color:#f8f8f8;}
+.board_list tbody td {padding:10px 20px; text-align:center;  letter-spacing:-0.05em; border-bottom:1px solid #c6c6c6;}
+.board_list tbody td a {color:#828282; display:block;}
+.board_list tbody td a:hover {text-decoration:underline;}
+.board_list tbody tr:hover {background-color: rgba(64, 120, 192, 0.05);}
+.board_list tbody td span.board_notice {display:inline-block; font-size:12px; color:#fff; font-weight:bold; padding:0 5px; border:1px solid #ff5a5a; background:#ff5a5a;
+ -webkit-border-radius: 10px 10px 0 10px;
+ -moz-border-radius: 10px 10px 0 10px;
+ -ms-border-radius: 10px 10px 0 10px;
+ border-radius: 10px 10px 0 10px;
+ }
+
+ @media screen and (max-width: 768px) {
+ .responsive-table {overflow-x:auto;}
+ .board_list {/* max-width:100%; */table-layout:auto;}
+ .board_list thead th, .board_list tbody th, .board_list tbody td {white-space:nowrap}
+ .board_list.no_responsible thead th, .board_list.no_responsible tbody th, .board_list.no_responsible tbody td {white-space:normal;}
+}
+
+/* Board View*/
+.board_view {border-top:2px solid #6b747f;}
+.board_view .board_subject {position:relative; padding:20px; font-size:22px; font-weight:bold; background:#fdfdfd;}
+.board_view .row.board_hd {margin:0; padding:0 5px 10px;  border-bottom:1px solid #ddd; background:#fdfdfd;}
+.board_view .row.board_hd i {display:inline-block; margin-right:10px; font-size:18px; color:#ff5a5a;}
+.board_view .row.board_hd a {color:#828282;}
+.board_view .board_content {padding:40px 20px; border-bottom:2px solid #6b747f;}
+.board_view .board_btn {padding:30px 0; text-align:center;}
+.board_view .board_btn .list_go {display:inline-block;}
+.board_view .board_btn .list_go .btn_board {background: #ff5a5a; color: #fff; padding:10px 40px;}
+.board_view .board_navi {border-top:1px solid #ddd; border-bottom:1px solid #ddd;}
+.board_view .board_navi ul {margin-bottom:0;}
+.board_view .board_navi li {padding:20px 0; line-heigth:0;}
+.board_view .board_navi .bd_b {border-bottom:1px solid #eee;}
+.board_view .board_navi .txt {display:inline-block; margin-right:80px;}
+.board_view .board_navi .no_news {font-weight:bold;}
+.board_view .board_navi a {font-weight:bold; color:#828282;}
+.board_view .board_navi i {display:inline-block; margin-right:30px; padding-left:20px; font-size:20px;}
+
+@media screen and (max-width: 768px) {
+ .board_view .board_navi .txt {margin-right:30px;}
+ .board_view .board_navi i {margin-right:20px;}
+}
+@media screen and (max-width: 480px) {
+ .board_view .board_navi .txt {display:none;}
+ .board_view .board_navi i {margin-right:20px;}
+}
+
+
+/* Board Search */
+.board_sch {overflow:hidden; margin-bottom:15px;}
+.board_sch>div {float:right;}
+.board_sch input, .board_sch select {float:left;}
+.board_sch input[type=text]{padding:0 10px; width:300px; height:30px; border:1px solid #c6c6c6;}
+.board_sch input[type=submit], .board_sch input[type=button]{margin-left:10px; width:60px; height:30px; text-align:center; font-weight:bold; font-size:14px; color:#fff; border:1px solid #484f68; background-color:#484f68;}
+.board_sch input[type=submit]:hover, .board_sch input[type=submit]:focus, .board_sch input[type=button]:hover, .board_sch input[type=button]:focus{border:1px solid #ff5a5a; background-color:#ff5a5a;}
+.board_sch select {margin-right:10px; width:100px; height:30px; border:1px solid #c6c6c6; font-size:14px;}
+
+ @media screen and (max-width: 768px) {
+ .board_list dd.file{position:static}
+ .board_list .img{display:none;width:100px}
+ .board_list .img img{max-width:100%}
+ .board_list li{padding-left:10px}
+ .board_sch input[type=text]{width:200px}
+ .board_sch select{width:62px}
+ .board_sch select + input[type=text]{width:125px}
+ .board_sch>div{/* float:none; */padding:0;}
+}
+
+/* Pagination */
+.paging {padding-top:40px; text-align:center; letter-spacing:0;}
+.paging a, .paging span {vertical-align:middle; font-size:14px;}
+.paging a {display:inline-block; height:30px; min-width:30px; margin:0 4px; padding:3px 4px 0; border:1px solid #ddd; color:#333;}
+.paging span {display:inline-block; width:20px; height:30px; padding-top:3px;}
+.paging a.on {color:#fff; border:1px solid #6b747f; background-color:#6b747f;}
+.paging a:hover, .paging a:focus {text-decoration:none; background-color:#eee}
+.paging a.on:hover, .paging a.on:focus {border:1px solid #6b747f; background-color:#6b747f}
+
+ @media screen and (max-width: 768px) {
+ .paging a {margin:0 1px; min-width:24px;}
+ .paging a, .paging span {font-size:13px;}
+ .paging span {width:16px;}
+}
