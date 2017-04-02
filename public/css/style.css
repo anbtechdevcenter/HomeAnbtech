@@ -37,13 +37,13 @@
 
 .history .row.history dl {position:relative; padding:20px 0;}
 .history .row.history dl dt {font-size:24px; font-weight:bold; padding-bottom:10px; color:#4078c0;}
-.history_r dl dt span {position:absolute; left:-36px; top:30px; width:13px; height:13px; background-color:#4078c0; border:1px solid #4078c0;
+.history_r dl dt span {position:absolute; left:-6px; top:6px; width:13px; height:13px; background-color:#4078c0; border:1px solid #4078c0;
  -webkit-border-radius: 50%;
  -moz-border-radius: 50%;
  -ms-border-radius: 50%;
  border-radius: 50%;
  }
- .history_l dl dt span {position:absolute; right:-37px; top:30px; width:13px; height:13px; background-color:#4078c0; border:1px solid #4078c0;
+ .history_l dl dt span {position:absolute; right:-7px; top:6px; width:13px; height:13px; background-color:#4078c0; border:1px solid #4078c0;
  -webkit-border-radius: 50%;
  -moz-border-radius: 50%;
  -ms-border-radius: 50%;
